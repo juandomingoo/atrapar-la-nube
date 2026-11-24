@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atrapar la nube · Chile Re-Descubre</title>
+  <meta name="description" content="Pieza interactiva sobre los atrapanieblas de Carlos Espinosa. MediaPipe + Three.js.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <!-- Interfaz sobre la escena -->
+  <div id="hud" class="hidden">
+    <header class="brand">
+      <span class="kicker">Hecho en Chile · Atrapanieblas</span>
+      <h1>Atrapar la nube</h1>
+    </header>
+
+    <div id="wind">La niebla llega desde el mar <span>↘</span></div>
+
+    <div id="meters">
+      <div class="meter">
+        <label>Malla de frente al viento</label>
+        <div class="bar"><i id="effBar"></i></div>
+      </div>
+      <div class="meter">
+        <label>Gotas en la malla</label>
+        <div class="bar"><i id="netBar"></i></div>
+      </div>
+      <div class="meter">
+        <label>Estanque <b id="tankPct">0%</b></label>
+        <div class="bar water"><i id="tankBar"></i></div>
+      </div>
+    </div>
+
+    <div id="story">
+      <p class="step" id="stepLabel"></p>
+      <p id="storyText"></p>
+    </div>
+
+    <div id="hint"></div>
+
+    <div id="camBox">
+      <video id="video" playsinline muted></video>
+      <canvas id="camOverlay"></canvas>
+      <span id="camStatus"></span>
+    </div>
+  </div>
+
+  <div id="cursor" class="hidden"></div>
+
+  <!-- Pantalla de inicio -->
+  <section id="intro" class="overlay">
+    <div class="card">
+      <span class="kicker">Chile Re-Descubre · Hecho en Chile</span>
+      <h2>Atrapar la nube</h2>
+      <p class="lead">En uno de los desiertos más secos del mundo, el agua no cae del cielo: flota.
+        Usa tu mano para atrapar la camanchaca, como lo imaginó el físico Carlos Espinosa.</p>
+      <ul class="howto">
+        <li><span>✋</span> Mano abierta: tiendes la malla</li>
+        <li><span>↔️</span> Mueves la mano: pones la malla de frente al viento</li>
+        <li><span>✊</span> Puño cerrado: el agua baja al estanque</li>
+      </ul>
+      <div class="actions">
+        <button id="btnCam" class="primary">Comenzar con cámara</button>
+        <button id="btnMouse" class="ghost">Usar mouse</button>
+      </div>
+      <p class="fine">La cámara se procesa solo en tu navegador: no se graba ni se envía ninguna imagen.</p>
+      <p id="introError" class="error"></p>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section id="finale" class="overlay hidden">
+    <div class="card">
+      <span class="kicker">Un regalo para el mundo</span>
+      <h2>El profesor que atrapó las nubes</h2>
+      <p class="lead">Carlos Espinosa Arancibia (1924), físico chileno, ideó los atrapanieblas después de la
+        sequía que afectó a Antofagasta en 1956. Su patente fue cedida a la UNESCO para que cualquier comunidad
+        pudiera usarla libremente.</p>
+      <p>Hoy, mallas inspiradas en su idea entregan agua en los cerros de Chile y en zonas áridas de todo el mundo.</p>
+      <div class="actions">
+        <button id="btnRestart" class="primary">Volver a empezar</button>
+      </div>
+      <p class="fine">Basado en el hito «Atrapanieblas» del libro <em>Hecho en Chile. 50 ideas, descubrimientos e innovaciones</em>.</p>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
