@@ -4,7 +4,7 @@
 Pieza audiovisual interactiva para el concurso **Chile Re-Descubre** (Congreso Futuro · ACHIPEC · CRTIC).
 
 🔗 **Demo en línea:** https://juandomingoo.github.io/atrapar-la-nube/
-🎬 **Cápsula audiovisual (1 min):** [ver video](PEGAR-AQUÍ-EL-LINK-DEL-VIDEO)
+🎬 **Cápsula audiovisual (1 min):** [ver video]((https://www.youtube.com/watch?v=kQeDdVWJo3M))
 
 ---
 
@@ -91,4 +91,4 @@ npx serve .
 
 ## Autor
 
-Nombre Apellido · Taller de Diseño de Interfaces · 2026
+Juan Domingo Pastorino · Taller de Diseño de Interfaces · 2026
