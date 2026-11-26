@@ -4,7 +4,7 @@
 Pieza audiovisual interactiva para el concurso **Chile Re-Descubre** (Congreso Futuro · ACHIPEC · CRTIC).
 
 🔗 **Demo en línea:** https://juandomingoo.github.io/atrapar-la-nube/
-🎬 **Cápsula audiovisual (1 min):** [ver video]((https://www.youtube.com/watch?v=kQeDdVWJo3M))
+🎬 **Cápsula audiovisual (1 min):** [ver video](https://www.youtube.com/watch?v=kQeDdVWJo3M)
 
 ---
 
